@@ -1,0 +1,31 @@
+### Ajouter un nouveau livre
+POST http://127.0.0.1:8089/livre
+Content-Type: application/json
+
+{
+  "isbn": 220,
+  "titre": "Apprendre Java",
+  "auteur": "Cherif Dupont",
+  "datePublication": "2025-01-01",
+  "numberOfPages": 350
+}
+
+### Modifier un livre existant
+PUT http://127.0.0.1:8089/livre/4
+Content-Type: application/json
+
+{
+  "isbn": 245,
+  "titre": "Maîtriser Spring",
+  "auteur": "Claire Martin",
+  "datePublication": "2024-12-15",
+  "numberOfPages": 420
+}
+
+### Supprimer un livre
+DELETE http://127.0.0.1:8089/livre/3
+Content-Type: application/json
+
+### Récupérer tous les livres
+GET http://127.0.0.1:8089/livre
+Content-Type: application/json

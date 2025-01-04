@@ -1,0 +1,29 @@
+### GET request to example server
+
+# Ajouter une nouvelle tâche
+POST http://127.0.0.1:8089/task
+Content-Type: application/json
+
+{
+  "libelle": "Nouvelle tâche",
+  "description": "Description de la tâche",
+  "statut": "CLOS"
+}
+
+### Appeler pour modifier
+PUT http://localhost:8089/task/102
+Content-Type: application/json
+
+{
+  "libelle": "Nouvelles tâches",
+  "description": "Description de la tâche modifiée",
+  "statut": "EN_COURS"
+}
+
+### Appeler pour Supprimer
+DELETE http://localhost:8089/task/153
+Content-Type: application/json
+
+### Appeler pour recupérer toutes les taches
+GET http://localhost:8089/task
+Content-Type: application/json
