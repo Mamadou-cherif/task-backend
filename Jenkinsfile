@@ -2,9 +2,8 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Mamadou-cherif/task-backend.git'
-            }
+           echo "_________________________________________Checkout_______________________"
+           echo "checkout ${env.BRANCH_NAME}"
         }
         stage('Build') {
             steps {
