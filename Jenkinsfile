@@ -2,8 +2,10 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-           echo "_________________________________________Checkout_______________________"
-           echo "checkout ${env.BRANCH_NAME}"
+            steps {
+                echo "_________________________________________Checkout_______________________"
+                echo "checkout ${env.BRANCH_NAME}"
+            }
         }
         stage('Build') {
             steps {
@@ -14,7 +16,6 @@ pipeline {
             steps {
                 echo "Creating Docker image"
             }
-
         }
         stage('Docker Publish') {
             steps {
